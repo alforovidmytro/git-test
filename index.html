@@ -2,20 +2,96 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
+	<meta charset="UtF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Hello VS Code></title>
 </head>
+<main>
 
-<body>
-	<h1>
-		Hi VS Code Hi VS Code Hi VS Code Hi VS Code Hi VS Code Hi VS Code Hi VS Code
-	</h1>
-	<p>I am Dmytro</p>
-	<!-- ! Hi VS Code -->
-	<!-- ? Hi VS Code -->
-	<!-- * Hi VS Code -->
-	<!-- TODO Hi VS Code -->
-</body>
+	<body>
+		<h1>
+			Hi VS Code Hi VS Code Hi VS Code Hi VS Code Hi VS Code Hi VS Code Hi VS Code
+		</h1>
+		<p>I am Dmytro</p>
+		<!--* test table-->
+		<table>
+			<caption>
+				Dolor
+			</caption>
+			<thead>
+				<tr>
+					<th>No.</th>
+					<th>Full name</th>
+					<th>Position</th>
+					<th>Salary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Bill Gates</td>
+					<td>Founder Microsoft</td>
+					<td>$1000</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td colspan="2">Bill Gates</td>
+					<td></td>
+					<!--! <td>$1200</td>-->
+					<!--? https://code.mu/ru/markup/manual/html/attr/colspan/-->
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Bill Gates</td>
+					<td>Founder Microsoft</td>
+					<td>$1100</td>
+				</tr>
+				<tr>
+					<td rowspan="2">4</td>
+					<td rowspan="2">Bill Gates</td>
+					<td rowspan="2">Founder Microsoft</td>
+					<td>$1300</td>
+				</tr>
+				<tr>
+					<!--! <td></td>-->
+					<!--! <td></td>-->
+					<!--! <td></td>-->
+					<td>$1300</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td rowspan="2">Total</td>
+					<td></td>
+					<td></td>
+					<td rowspan="2">$4700</td>
+				</tr>
+				<tr>
+					<!--! <td>Total</td>-->
+					<td></td>
+					<td></td>
+					<!--! <td>$4600</td>-->
+				</tr>
+			</tfoot>
+		</table>
+		<!--* test Фрейми.<iframe> - визначає контейнер для вкладеного “контексту перегляду”. Можна вставити одну веб-сторінку в іншу -->
+		<!--? https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe-->
+		<!--TODO Вставка гугл карты на страницу сайта-->
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.725534607844!2d28.82703477522252!3d45.35435244076274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b76f5734c9eafd%3A0x17bab0007c127488!2z0KLQvtGA0LPQvtCy0YvQuSDQtNC-0LwgIiDQlNC10LvRjNGC0LAgIg!5e0!3m2!1sru!2sua!4v1738135647632!5m2!1sru!2sua"
+			width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+		</iframe>
+		<!--* test цветных коментариев-->
+		<!--! Hi VS Code-->
+		<!--? Hi VS Code-->
+		<!--* Hi VS Code-->
+		<!--TODO Hi VS Code-->
+	</body>
+	<footer>
+		<!--* test Символьні підстановки. Символьні підстановки (спецсимволи) - це спеціальні рядки, що перетворюються браузерами в символи. Наприклад, символ авторського права © можна додати як &copy;-->
+		<p>&copy; 2025 Дані захищені</p>
+		<!--? https://advermedia.ua/blog/spetssimvoly-html/-->
+	</footer>
+</main>
 
 </html>
