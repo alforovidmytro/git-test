@@ -5,32 +5,39 @@
 	<meta charset="UtF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Hello VS Code></title>
+	<style>
+		h1 {
+			background-color: rgb(43, 189, 226);
+		}
+	</style>
+	<link rel="stylesheet" href="./CSS/styles.css">
 </head>
 
 <body>
-	<header id="home-section">
+	<header>
 		<nav>
 			<a href=""><img src="./images/logo.svg" alt="Логотип" /></a>
 			<ul>
-				<li><a href="#tbles-section">Таблиці</a></li>
+				<li><a href="#tables-section">Таблиці</a></li>
 				<li><a href="#frames-section">Фрейми</a></li>
 				<li><a href="#audio-section">Аудіо-контент</a></li>
 				<li><a href="#video-section">Відео-контент</a></li>
 				<li><a href="#сontacts-footer">Контакти</a></li>
+				<li><a href="#bettercomments-section">Кольорові коментарі в коді</a></li>
 			</ul>
 		</nav>
-		<button type="button">
-			<p>Спецсимволи</p>
+		<button class="button" type="button">
+			<a href="https://advermedia.ua/blog/spetssimvoly-html" target="_blank">Спецсимволи</a>
 		</button>
 	</header>
 	<main>
 		<section>
-			<h1>
+			<h1 style="color: red;" class="main-title" id="main-title">
 				Hi VS Code
 			</h1>
 			<p>I am Dmytro</p>
 		</section>
-		<section id="tbles-section">
+		<section id="tables-section">
 			<!--* test table-->
 			<h2>
 				Таблиці
@@ -96,10 +103,16 @@
 				</tfoot>
 			</table>
 		</section>
-		<section id="frames-section">
+		<section id="frames-section" class="frames-section">
 			<h2>
 				Фрейми
 			</h2>
+			<h3>Вставка гугл карты на страницу сайта</h3>
+			<p>Test Фреймa</p>
+			<p>Фрейм (&#60;iframe&#62;) - визначає контейнер для вкладеного “контексту перегляду”. Можна вставити одну
+				веб-сторінку в
+				іншу.
+			</p>
 			<!--* test Фрейми.<iframe> - визначає контейнер для вкладеного “контексту перегляду”. Можна вставити одну веб-сторінку в іншу-->
 			<!--? https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe-->
 			<!--TODO Вставка гугл карты на страницу сайта-->
@@ -107,8 +120,6 @@
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.725534607844!2d28.82703477522252!3d45.35435244076274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b76f5734c9eafd%3A0x17bab0007c127488!2z0KLQvtGA0LPQvtCy0YvQuSDQtNC-0LwgIiDQlNC10LvRjNGC0LAgIg!5e0!3m2!1sru!2sua!4v1738135647632!5m2!1sru!2sua"
 				width="603" height="595" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 			</iframe>
-		</section>
-		<section>
 			<h3>
 				Медіаконтент. Вставка видео с YouTube
 			</h3>
@@ -139,23 +150,61 @@
 				<source src="./media/video.mp4" type="video/mp4">
 			</video>
 		</section>
-		<section>
+		<section id="bettercomments-section">
+			<h2>Кольорові коментарі в коді - Better comments</h2>
 			<!--* test цветных коментариев-->
 			<!--! Hi VS Code-->
 			<!--? Hi VS Code-->
 			<!--* Hi VS Code-->
 			<!--TODO Hi VS Code-->
+			<button class="button" type="button">
+				<a href="./images/better-comments.png" target="_blank">Better comments</a>
+			</button>
+			<button class="button" type="button">
+				<a href="https://github.com/aaron-bond/better-comments/raw/HEAD/images/better-comments.PNG"
+					target="_blank">Better comments</a>
+			</button>
 		</section>
+		<section id="button-section">
+			<h2>Рабочая кнопка</h2>
+			<button class="button" type="button">
+				<p>work button</p>
+			</button>
+		</section>
+		<section id="button-disabled-section">
+			<h2>Неакивная кнопка</h2>
+			<button class="button-disabled" type="button" disabled>
+				<p>disabled</p>
+			</button>
+		</section>
+		<section id="psevdoklasses-section">
+			<h2>Псевдокласи стану</h2>
+			<p>Псевдокласи стану використовуються щоб задати стилі інтерактивним
+				елементам за певної події</p>
+			<h3>... hover (псевдоклас наведення курсору)</h4>
+				<button class="button-hover" type="button">
+					<p>hover</p>
+				</button>
+				<h3>... focus (псевдоклас фокусування з миші/клавіатури)</h3>
+				<button class="button-focus" type="button">
+					<p>focus</p>
+				</button>
+				<h3>... active (псевдоклас кліку)</h3>
+				<button class="button-active" type="button">
+					<p>active</p>
+				</button>
+		</section>
+
 	</main>
 	<footer>
 		<nav>
 			<a href=""><img src="./images/logo.svg" alt="Логотип" /></a>
 			<ul>
-				<li><a href="#tbles-section">Таблиці</a></li>
+				<li><a href="#tables-section">Таблиці</a></li>
 				<li><a href="#frames-section">Фрейми</a></li>
 				<li><a href="#audio-section">Аудіо-контент</a></li>
 				<li><a href="#video-section">Відео-контент</a></li>
-				<li><a href="#home-section">Головна</a></li>
+				<li><a href="#bettercomments-section">Кольорові коментарі в коді</a></li>
 			</ul>
 		</nav>
 		<address id="сontacts-footer">
