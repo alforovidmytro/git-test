@@ -1,27 +1,32 @@
-/**TODO HTML-елементі, до яких застосовуются селектори**/
-/**! селектор тегу, т.к. h1 - это тег**/
+/*TODO HTML-елементі, до яких застосовуются селектори*/
+/*! селектор тегу, т.к. h1 - это тег*/
 h1 {
 	border: 4px solid burlywood;
 }
-/**! селектор класу**/
-.main-title {
+/*! селектор класу*/
+.hero-title {
 	font-size: 50px;
 	font-family: Roboto, Arial, sans-serif;
 }
-/**! Наступный селектор, це селектор ідентифікатора id=""**/
-#main-title {
+/*! Наступный селектор, це селектор ідентифікатора id=""*/
+#hero-title {
 	padding-left: 500px;
 }
-/**! Cелектор атрибуту, наприклад селектора атрибуту button(кнопка) type**/
-/** Присвоим, также атрибуту button(кнопка), класс .button и пропишем его свойства**/
+/*TODO Окрасим часть заголовка h1 в цвет "color:rgba(70, 89, 41, 1);". Для этого обернём в "span" эту часть заголовка с классом "accent" и создадим класс "accent" в styles.css и пропишем в нём цвет "color:rgba(70, 89, 41, 1);"*/
+.accent {
+	color:rgba(70, 89, 41, 1);
+}
+
+/*! Cелектор атрибуту, наприклад селектора атрибуту button(кнопка) type*/
+/** Присвоим, также атрибуту button(кнопка), класс .button и пропишем его свойства*/
 [type] {
 	border: 2px solid rgb(197, 25, 177);
 }
-/**! Cелектор нащадка та дитини. Наприклад, секції "frames-section" призначимо клас class="frames-section" <section id="frames-section" class="frames-section", в якому пропишем колір всіх шрифтів в цієї секції. Чому всіх шрифтів в ціеї секції, тому що всі заголовки та абзаци в цієї секції, є нащадками цієї секції>**/
+/*! Cелектор нащадка та дитини. Наприклад, секції "frames-section" призначимо клас class="frames-section" <section id="frames-section" class="frames-section", в якому пропишем колір всіх шрифтів в цієї секції. Чому всіх шрифтів в ціеї секції, тому що всі заголовки та абзаци в цієї секції, є нащадками цієї секції>*/
 .frames-section {
 	color: blue;
 }
-/**! Но допустим, что надо сделать абзацы и заголовки "h3" другим цветом. Для этого используем селектор "дитини". А именно, выводим необходимое через ">" и задаём нужные свойства полученному классу**/
+/*! Но допустим, что надо сделать абзацы и заголовки "h3" другим цветом. Для этого используем селектор "дитини". А именно, выводим необходимое через ">" и задаём нужные свойства полученному классу*/
 .frames-section > p {
 	color:rgb(133, 3, 3);
 }
@@ -29,18 +34,18 @@ h1 {
 	color:rgb(3, 133, 25);
 }
 
-/**! Присвоим тегу "button" класс class="button" и пропишем его свойства>**/
+/*! Присвоим тегу "button" класс class="button" и пропишем его свойства>*/
 .button {
 	color:rgba(250, 244, 234, 1);
 	background-color:rgba(129, 155, 87, 1);
 	border: 2px solid rgba(129, 155, 87, 1);
 	border-radius: 8px;
+	cursor: pointer;
 }
 .button:hover {
 	color: rgba(70, 89, 41, 1);
 	background-color:transparent;
 	text-transform:uppercase;
-	cursor: pointer;
 }
 .button:focus {
 	color:rgba(70, 89, 41, 1);
@@ -53,37 +58,58 @@ h1 {
 	background-color:rgb(97, 18, 201);
 }
 
-/**! Чтобы сделать кнопку(button) не активной, присвоим тегу "button" класс class="button-disabled">, а классу присвоим атрибут [disabled]. В index.html, кнопке с класом class="button-disabled", которая должна стать неактивной, тоже присвоим атрибут "disabled" (<button class="button-disabled" type="button" disabled>)**/
-/** Напоминание: толщина и цвет "border" кнопки указан выше, в селекторе трибута кнопки "type". А именно: [type] {border: 2px solid rgb(197, 25, 177);}**/ 
+/*! Чтобы сделать кнопку(button) не активной, присвоим тегу "button" класс class="button-disabled">, а классу присвоим атрибут [disabled]. В index.html, кнопке с класом class="button-disabled", которая должна стать неактивной, тоже присвоим атрибут "disabled" (<button class="button-disabled" type="button" disabled>)*/
+/** Напоминание: толщина и цвет "border" кнопки указан выше, в селекторе трибута кнопки "type". А именно: [type] {border: 2px solid rgb(197, 25, 177);}*/ 
 
 .button-disabled[disabled] {
 	border-radius: 8px;
 	text-transform:uppercase;
 }
 
-/**TODO Псевдокласи стану**/
-/** Псевдоклассы состояния — используются для установки стилей для интерактивного элемента для определённого события**/
-/**! ... hover (псевдоклас наведення курсору)**/
+/*TODO Псевдокласи стану*/
+/** Псевдоклассы состояния — используются для установки стилей для интерактивного элемента для определённого события*/
+/*! ... hover (псевдоклас наведення курсору)*/
+.button-hover {
+	border-radius: 8px;
+	cursor: pointer;
+}
 .button-hover:hover {
 	color: rgba(70, 89, 41, 1);
 	background-color:transparent;
 	text-transform:uppercase;
 	border-radius: 8px;
+}
+/*! ... focus (псевдоклас фокусування з миші/клавіатури)*/
+.button-focus {
+	border-radius: 8px;
 	cursor: pointer;
 }
-/**! ... focus (псевдоклас фокусування з миші/клавіатури)**/
 .button-focus:focus {
 	color:rgba(70, 89, 41, 1);
 	background-color:rgb(152, 166, 188);
 	text-transform:uppercase;
 	border-radius: 8px;
+}
+/*! ... active (псевдоклас кліку)*/
+.button-active {
+	border-radius: 8px;
 	cursor: pointer;
 }
-/**! ... active (псевдоклас кліку)**/
 .button-active:active {
 	color:white;
 	text-transform:uppercase;
 	background-color:rgb(97, 18, 201);
 	border-radius: 8px;
-	cursor: pointer;
+}
+
+/*TODO Пропишем свойства ссылок*/
+.link {
+	color:rgb(47, 6, 159);
+	text-decoration: none;
+}
+.link:hover {
+	color:rgba(129, 155, 87, 1);
+}
+ul {
+	list-style-type: none;
 }
