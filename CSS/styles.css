@@ -1,3 +1,12 @@
+/** Variables*/
+/** Base*/
+/** Button*/
+/** Link*/
+/** Hero section*/
+/** Advantages-list-section*/
+/** Tables section*/
+/** и т.д./
+
 /*TODO HTML-елементі, до яких застосовуются селектори*/
 /*! селектор тегу, т.к. h1 - это тег*/
 h1 {
@@ -112,4 +121,10 @@ h1 {
 }
 ul {
 	list-style-type: none;
+}
+
+/*TODO Пропишем свойства секции переваг (<section id="advantages-list-section">), а именно списка "ul" с классом "advantages-list" (<ul class="advantages-list">)*/
+.advantages-list{
+	color: rgba(250, 244, 234, 1);
+	background-color: rgba(129, 155, 87, 1);
 }
